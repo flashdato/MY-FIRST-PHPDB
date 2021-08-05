@@ -11,16 +11,17 @@
 </head>
 <body>
     <?php 
-
-    $userctrl = new Usersctrl();
-    $userctrl->createUser("soso", "gobeglejiashvili", "1999");
-    $userctrl->createUser("terenti", "wyneteli", "1980");
-    $userctrl->createUser("jon", "doe", "1990");
-
-    $userview = new Usersview();
-    $userview->showUser("soso");
-    
+       $userview = new Usersview();
+       $userview->showUsers();
     ?>
+
+    <form action="includes/tempcreateusers.inc.php" method="post">
+      <p>Enter User info:</p>
+      <input type="name" name="name" placeholder="Enter Name"><br>
+      <input type="name" name="lastname" placeholder="Enter Lastname"><br>
+      <input type="number" name="date" placeholder="Enter Date Of Birth"><br>
+      <button type="submit" name="submit">Enter!</button><br>
+    </form>
     
 </body>
 </html>
