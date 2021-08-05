@@ -11,8 +11,14 @@
 </head>
 <body>
     <?php 
-    $test = new Test();
-    $test->setUsersSTMT("JOHN","SINS", "6969")
+
+    $userctrl = new Usersctrl();
+    $userctrl->createUser("soso", "gobeglejiashvili", "1999");
+    $userctrl->createUser("terenti", "wyneteli", "1980");
+    $userctrl->createUser("jon", "doe", "1990");
+
+    $userview = new Usersview();
+    $userview->showUser("soso");
     
     ?>
     
